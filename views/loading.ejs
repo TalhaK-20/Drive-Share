@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/cloud.PNG" type="image/x-icon">
+    <title>Loading</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <h1>Uploading...</h1>
+
+    <div class="loading-bar">
+        <div class="loading-bar-fill" id="loading-bar"></div>
+    </div>
+
+    <script>
+        let width = 0;
+        const loadingBar = document.getElementById('loading-bar');
+        const interval = setInterval(() => {
+            
+            if (width >= 100) {
+                clearInterval(interval);
+            } 
+            
+            else {
+                width++;
+                loadingBar.style.width = width + '%';
+                loadingBar.textContent = width + '%';
+            }
+
+        }, 50);
+
+    </script>
+
+</body>
+</html>

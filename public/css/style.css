@@ -1,0 +1,13 @@
+.loading-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+.loading-bar-fill {
+    height: 24px;
+    width: 0;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 24px;
+    color: white;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/cloud.PNG" type="image/x-icon">
+    <title>Successfully Uploaded</title>
+    
+    <style>
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #4facfe, #06234A);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .message-box {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #00f2fe;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #4facfe;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="message-box" id="messageBox">
+        <h1>Your file has been uploaded, dear.</h1>
+        <p>Congratulations Talha Khalid, for successfully using the Google Drive APIs to complete the self-task.</p>
+        <p>File Name: <%= file.filename %></p>
+        <p>Google Drive File ID: <%= file.googleDriveId %></p>
+        <p><a href="https://drive.google.com/file/d/<%= file.googleDriveId %>/view" target="_blank">View File</a></p>
+    </div>
+
+    <script>
+
+        window.onload = function() {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.style.opacity = 1;
+            messageBox.style.transform = 'translateY(0)';
+        };
+
+    </script>
+
+</body>
+</html>
